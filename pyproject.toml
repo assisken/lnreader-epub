@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "lnreader-fb2"
+version = "0.0.1"
+description = "A script to convert LNReader backups to fb2 books"
+authors = ["assisken <assisken@gmail.com>"]
+license = "beerware"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+FB2 = "^0.1.7"
+pydantic = "^1.9.0"
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+isort = "^5.10.1"
+mypy = "^0.942"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+plugins = [
+  "pydantic.mypy"
+]
